@@ -1,15 +1,14 @@
-const removeFromArray = function(input, ...Args) {
-    let answer = input.filter(item => {
-        for(let i = 0; i <= Args.length; i++){
-            if(item !== Args[i]){
-                console.log("item",item)
-                console.log("arg",Args[i])
-                return item
+
+const removeFromArray = function(input, ...Args) {       
+
+    for(let i = 0; i<Args.length; i++){
+        for(let j = 0; j<input.length; j++){
+                if(input[j] === Args[i]){
+                   input.splice(j,1)
+                }
             }
         }
-        
-    })
-    return answer;
+        return input
 };
 // hmmm
 // Do not edit below this line
